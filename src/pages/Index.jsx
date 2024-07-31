@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 const Index = () => {
   const currentYear = new Date().getFullYear();
@@ -11,13 +11,13 @@ const Index = () => {
     <div className="container mx-auto px-4 py-8">
       {/* Header Section */}
       <header className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-2">Prometheus Metrics Overview</h1>
-        <p className="text-xl text-gray-600">Understanding and Implementing Prometheus Metrics with Python</p>
+        <h1 className="text-4xl font-bold mb-2 text-white">Prometheus Metrics Overview</h1>
+        <p className="text-xl text-blue-200">Understanding and Implementing Prometheus Metrics with Python</p>
       </header>
 
       {/* Introduction Section */}
       <section className="mb-12">
-        <Card>
+        <Card className="bg-blue-700 text-white">
           <CardHeader>
             <CardTitle>Introduction to Prometheus</CardTitle>
           </CardHeader>
@@ -33,7 +33,7 @@ const Index = () => {
 
       {/* Metrics Overview Section */}
       <section className="mb-12">
-        <Card>
+        <Card className="bg-blue-700 text-white">
           <CardHeader>
             <CardTitle>What are Prometheus Metrics?</CardTitle>
           </CardHeader>
@@ -54,22 +54,22 @@ const Index = () => {
 
       {/* Python Examples Section */}
       <section className="mb-12">
-        <Card>
+        <Card className="bg-blue-700 text-white">
           <CardHeader>
             <CardTitle>Python Examples</CardTitle>
-            <CardDescription>Learn how to use Prometheus with Python</CardDescription>
+            <CardDescription className="text-blue-200">Learn how to use Prometheus with Python</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               <Collapsible>
                 <CollapsibleTrigger asChild>
-                  <Button variant="outline" className="w-full flex justify-between items-center">
+                  <Button variant="outline" className="w-full flex justify-between items-center bg-blue-600 text-white hover:bg-blue-500">
                     <span>Example 1: Setting up Prometheus client</span>
                     <ChevronDown className="h-4 w-4" />
                   </Button>
                 </CollapsibleTrigger>
                 <CollapsibleContent className="mt-2">
-                  <pre className="bg-gray-100 p-4 rounded-md overflow-x-auto">
+                  <pre className="bg-blue-800 p-4 rounded-md overflow-x-auto text-blue-100">
                     <code>{`
 from prometheus_client import start_http_server, Counter
 
@@ -96,13 +96,13 @@ if __name__ == '__main__':
 
               <Collapsible>
                 <CollapsibleTrigger asChild>
-                  <Button variant="outline" className="w-full flex justify-between items-center">
+                  <Button variant="outline" className="w-full flex justify-between items-center bg-blue-600 text-white hover:bg-blue-500">
                     <span>Example 2: Using different metric types</span>
                     <ChevronDown className="h-4 w-4" />
                   </Button>
                 </CollapsibleTrigger>
                 <CollapsibleContent className="mt-2">
-                  <pre className="bg-gray-100 p-4 rounded-md overflow-x-auto">
+                  <pre className="bg-blue-800 p-4 rounded-md overflow-x-auto text-blue-100">
                     <code>{`
 from prometheus_client import Counter, Gauge, Histogram, Summary
 
@@ -135,7 +135,7 @@ s.observe(4.7)    # Observe 4.7 (seconds in this case)
 
       {/* Conclusion Section */}
       <section className="mb-12">
-        <Card>
+        <Card className="bg-blue-700 text-white">
           <CardHeader>
             <CardTitle>Conclusion</CardTitle>
           </CardHeader>
@@ -151,7 +151,7 @@ s.observe(4.7)    # Observe 4.7 (seconds in this case)
       </section>
 
       {/* Footer Section */}
-      <footer className="text-center text-gray-500">
+      <footer className="text-center text-blue-200">
         <p>© {currentYear} Prometheus Metrics Guide</p>
       </footer>
     </div>
